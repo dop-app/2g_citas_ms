@@ -17,7 +17,7 @@ import (
 
 const (
 	// hosts = "localhost:27017"
-	hosts      = "citas_db:27017"
+	hosts      = "citas-db:27017"
 	database   = "2g_citas_bd"
 	username   = ""
 	password   = ""
@@ -196,7 +196,7 @@ func main() {
 	router.HandleFunc("/citas/{id}", EditCitaEndpoint).Methods("PUT")
 	router.HandleFunc("/citas/{id}", DeleteCitaEndpoint).Methods("DELETE")
 
-	log.Fatal(http.ListenAndServe(":3300", router))
+	log.Fatal(http.ListenAndServe(":4005", router))
 }
 
 // initialiseMongo, se encarga de inicializar mongo con los datos almacencados como constantes

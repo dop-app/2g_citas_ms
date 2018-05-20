@@ -1,17 +1,17 @@
 version: '2'
 services:
-  citas_db:
+  citas-db:
     image: mongo:latest
     ports:
       - "27018:27017"
     volumes:
       - "mongodata:/data/2g_citas_bd"
-  citas_ms:
+  citas-ms:
     build: . 
     ports:
       - "4005:3300"
     depends_on:
-      - citas_db
+      - citas-db
 volumes:
    mongodata:
 
